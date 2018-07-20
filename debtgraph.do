@@ -1,17 +1,20 @@
-/*  The following is just the Stata import of sheets from FRED.
+/*
+    
+    The following is just the Stata import of sheets from FRED.
     Saved in Stata dataset, so not necessary.
     Here for clarity & a reminder when I inevitably forget how to import
     and format dates from Excel.
 
-import excel "C:\Users\delamb\Documents\Skull\^econ420\debt\debt_and_gdp_ratio_fred_serialDate.xlsx", sheet("debt_and_gdp_ratio_fred") firstrow
+import delimited debt_and_gdp_ratio_fred_serialDate.csv, varnames(1) case(preserve) 
 gen dateStata = dateExcel1900 + td(30dec1899)
 format dateStata %td
 tsset dateStata
 gen  debtTrillions = debtMillions/1000000
+save debt_and_gdp_ratio.dta //, replace
 
 */
 
-* use debt_and_gdp_ratio.dta
+use debt_and_gdp_ratio.dta, clear
 
 // define light & dark blues
 local light `" "0 190 242" "'
@@ -62,3 +65,5 @@ twoway ///
     plotregion(fcolor(none) lcolor(none) lwidth(none)) ///
     xsize(10.875) ysize(4.25) ///
     name(debt, replace) 
+
+graph export debt.png, as(png) replace

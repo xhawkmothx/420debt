@@ -2,3 +2,7 @@
 *.un
 *.*~
 ~&*
+.commandhist.do
+debt.png
+
+other/
