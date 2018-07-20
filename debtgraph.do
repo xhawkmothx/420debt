@@ -48,12 +48,12 @@ twoway ///
     (function y=110, range(`b07' `e07') color(gs12%60) lcolor(%0) recast(area)) ///
     (tsline debtTrillions, yaxis(2) lcolor(`dark') lwidth(thick)) ///
     (tsline pctGDP, lcolor(`light') lwidth(thick)), ///
-    ytitle("Percent", size(medsmall) margin(medium)) yscale(range(0 110)) yscale(noline) ///
-    ylabel(#11, labsize(vsmall) noticks nogrid) ///
+    ytitle("Percent", size(medsmall)) yscale(range(0 110)) yscale(noline) ///
+    ylabel(#11, labsize(small) angle(horizontal) labgap(small) noticks nogrid) ///
     ytitle("Trillions of Dollars", size(medsmall) margin(medium) axis(2)) yscale(noline axis(2)) ///
-    ylabel(0(2)22, labsize(vsmall) noticks grid glwidth(vthin) glcolor(gs6) axis(2)) ///
+    ylabel(0(2)22, labsize(small) angle(horizontal) labgap(small) noticks grid glwidth(vthin) glcolor(gs6) axis(2)) ///
     ymtick(##2, nolabels noticks grid glwidth(vthin) glcolor(gs6) glpattern(dot) axis(2)) ///
-    ttitle(" ", size(zero))  tscale(noline) ///
+    ttitle(" ", size(zero))  tscale(noline)  ///
     tlabel(01jan1965 "1965" 01jan1970 "1970" 01jan1975 "1975" 01jan1980 "1980" 01jan1985 "1985" 01jan1990 "1990" ///
            01jan1995 "1995" 01jan2000 "2000" 01jan2005 "2005" 01jan2010 "2010" 01jan2015 "2015", ///
            labels labsize(vsmall) angle(forty_five) format(%td) noticks grid glwidth(vthin) glcolor(gs6) gmin gmax) ///
