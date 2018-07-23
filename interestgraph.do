@@ -54,10 +54,9 @@ twoway ///
     tlabel(01jan1965 "1965" 01jan1970 "1970" 01jan1975 "1975" 01jan1980 "1980" 01jan1985 "1985" 01jan1990 "1990" ///
            01jan1995 "1995" 01jan2000 "2000" 01jan2005 "2005" 01jan2010 "2010" 01jan2015 "2015", ///
            labels labsize(vsmall) angle(forty_five) format(%td) noticks grid glwidth(vthin) glcolor(gs6) gmin gmax) ///
-    legend(order(9 "Nominal Debt" 8 "Percent of GDP" 1 "Recessions") ///
+    legend(order(10 "Nominal Payments" 8 "% of GDP" 9 "% of Federal Budget Outlay" 1 "Recessions") ///
         rows(1) size(small) nobox region(fcolor(none) lcolor(none)) position(7)) ///
-    caption("Sources: US Dept. of the Treasury, Fiscal Service; Federal Reserve Bank of St. Louis" ///
-    "(FRED Series: GFDEBTN; GFDEGDQ188S)", size(vsmall) color(gs6)) ///
+    caption("Source: Office of Management and Budget, Historical Tables", size(vsmall) color(gs6)) ///
     graphregion(fcolor(white) lcolor(none) lwidth(none)) ///
     plotregion(fcolor(none) lcolor(none) lwidth(none)) ///
     xsize(10.875) ysize(4.25) ///
